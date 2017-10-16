@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>input输入框聚焦动画特效</title>
+	<link rel="stylesheet" type="text/css" href="css/input-style.css">
+
+</head>
+<body>
+	<div id="app">
+		<div class="person_message mar-top">
+			<h4 class="person_message_title">个人信息</h4>
+			<div class="col col-1">
+				<div class="ntitle">姓名</div>
+				<div class="infoma_text">施伟达</div>
+			</div>
+			<div class="col col-2">
+				<div class="ntitle">电话</div>
+				<div class="infoma_text">13798661922</div>
+			</div>
+			<div class="col col-33">
+				<div class="ntitle">住址</div>
+				<div class="infoma_text">南二宿舍208</div>
+			</div>
+		</div>
+
+		<div class="infoma">
+			<h4 class="infoma_title">取件信息</h4>
+			<div class="col col-33">
+				<span class="message_title">取件短信粘贴</span>
+				<div class="note_message">你好，你的快递在大成楼，请尽快来取,你好，你的快递在大成楼，请尽快来取你好，你的快递在大成楼，请尽快来取你好，你的快递在大成楼，请尽快来取</div>
+
+			</div>	
+		</div>
+		
+		<!-- 信息为空则隐藏 -->
+		<div class="remark" style="display:none">
+			<h4 class="remark_title">备注</h4>
+			<div class="col col-33">
+				<div class="ntitle_other">其它特别说明</div>
+				<div class="infoma_text_other">尽快送，谢谢</div>
+			</div>	
+		</div>
+		
+		<div class="state_box">
+			<div class="list on"><div class="button">下单</div><p>10-16 22:32</p></div>
+			<div class="list" v-bind:class="{ on: isActive1 }"><div class="button" v-on:click="tostate(isActive1=true)">已取件</div><p>{{a}}-{{b}} {{c}}:{{d}}</p></div>
+			<div class="list" v-bind:class="{ on: isActive2 }"><div class="button" v-on:click="tostate(isActive2=true)">已派送</div><p>{{a}}-{{b}} {{c}}:{{d}}</p></div>
+		</div>
+
+	</div>
+
+
+	<script src="js/vue.min.js"></script>
+	<script>
+		var app = new Vue({
+		  el: '#app',
+		  data: {
+		    isActive1: false,
+		    isActive2: false,
+		    a:new Date().getMonth()+1,
+		    b:new Date().getDate(),
+			c:new Date().getHours(),
+			d:new Date().getMinutes()<10 ? "0"+new Date().getMinutes() : new Date().getMinutes()
+		  },
+		  methods: {
+		  	tostate:function(){
+
+		  	}
+		  }
+		})
+
+	</script>
+
+
+</body>
+</html>
