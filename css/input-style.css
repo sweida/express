@@ -109,9 +109,9 @@ textarea{min-height:80px;resize: none;overflow:visible}
     background-size: contain;
     padding-left: 30px;
 }
-.person_message{background:url(../image/001.png) repeat-x;}
-.infoma{background:url(../image/002.png) repeat-x;}
-.remark{background:url(../image/003.png) repeat-x;}
+.person_message{background:url(../image/01.png) repeat-x;}
+.infoma{background:url(../image/02.png) repeat-x;}
+.remark{background:url(../image/03.png) repeat-x;}
 
 .change_address{
 	position: absolute;
